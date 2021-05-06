@@ -29,10 +29,10 @@ export class LoginComponent implements OnInit {
     this.pswd = event.target.value
     console.log(this.pswd);
   }
-  login() {
+  login(a:any,p:any) {
 
-    var acno = this.accno;
-    var pswd = this.pswd;
+    var acno = a.value;
+    var pswd = p.value;
     let dataset = this.AccountDetails;
     if (acno in dataset) {
       if (pswd == dataset[acno]["pswd"]) {
